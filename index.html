@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University of Excellence</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="contact-info">
+                <span><i class="fas fa-phone"></i> +1 (800) 123-4567</span>
+                <span><i class="fas fa-envelope"></i> info@university.edu</span>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <i class="fas fa-university"></i>
+                <div class="logo-text">
+                    <h1>UnivExcellence</h1>
+                    <span>Est. 1920</span>
+                </div>
+            </a>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#admissions">Admissions</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#faculty">Faculty</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#admissions" class="btn btn-primary nav-btn">Apply Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Area (Single Page App approach) -->
+    <main id="main-content">
+        
+        <!-- HOME PAGE -->
+        <section id="home" class="page-section active-page">
+            <div class="hero">
+                <div class="hero-content">
+                    <h2>Empowering the Leaders of Tomorrow</h2>
+                    <p>Discover a world-class education with innovative research, a diverse community, and unparalleled opportunities.</p>
+                    <div class="hero-buttons">
+                        <a href="#courses" class="btn btn-primary">Explore Courses</a>
+                        <a href="#contact" class="btn btn-outline-light">Take a Tour</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container section-padding text-center">
+                <h2 class="section-title">Welcome to UnivExcellence</h2>
+                <p class="section-subtitle mb-20">A tradition of academic excellence and holistic development.</p>
+                <div class="grid-3 mt-20">
+                    <div class="card feature-card">
+                        <i class="fas fa-book-reader feature-icon"></i>
+                        <h3>Global Curriculum</h3>
+                        <p>Our courses are designed by industry experts to prepare you for global challenges.</p>
+                    </div>
+                    <div class="card feature-card">
+                        <i class="fas fa-flask feature-icon"></i>
+                        <h3>Modern Labs</h3>
+                        <p>State-of-the-art research facilities and laboratories for hands-on learning.</p>
+                    </div>
+                    <div class="card feature-card">
+                        <i class="fas fa-globe-americas feature-icon"></i>
+                        <h3>Diverse Campus</h3>
+                        <p>Students from over 50 countries creating a vibrant and inclusive community.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ADMISSIONS PAGE -->
+        <section id="admissions" class="page-section">
+            <div class="page-header">
+                <div class="container">
+                    <h2>Admissions</h2>
+                    <p>Begin your journey with us.</p>
+                </div>
+            </div>
+            <div class="container section-padding">
+                <div class="grid-2">
+                    <div>
+                        <h3>Admission Process 2026</h3>
+                        <p>We look for students who are passionate, curious, and driven to make a difference. Our holistic review process considers academic achievements, extracurricular activities, and personal essays.</p>
+                        <ul class="process-list mt-20">
+                            <li><i class="fas fa-check-circle" style="color:var(--primary); margin-right:10px;"></i><strong>Step 1:</strong> Submit the online application form.</li>
+                            <li><i class="fas fa-check-circle" style="color:var(--primary); margin-right:10px;"></i><strong>Step 2:</strong> Upload required documents (transcripts, ID, etc.).</li>
+                            <li><i class="fas fa-check-circle" style="color:var(--primary); margin-right:10px;"></i><strong>Step 3:</strong> Pay the application fee.</li>
+                            <li><i class="fas fa-check-circle" style="color:var(--primary); margin-right:10px;"></i><strong>Step 4:</strong> Appear for the entrance interview.</li>
+                        </ul>
+                        <div class="info-box mt-20">
+                            <i class="fas fa-info-circle"></i>
+                            <p><strong>Application Deadline:</strong> November 30, 2026</p>
+                        </div>
+                    </div>
+                    <div class="card form-card">
+                        <h3>Online Inquiry Form</h3>
+                        <form id="admissionForm">
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" required placeholder="Enter your full name">
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" required placeholder="Enter your email">
+                            </div>
+                            <div class="form-group">
+                                <label>Program of Interest</label>
+                                <select required>
+                                    <option value="">Select a program...</option>
+                                    <option value="ug">Undergraduate</option>
+                                    <option value="pg">Postgraduate</option>
+                                    <option value="phd">Ph.D.</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Submit Inquiry</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COURSES PAGE -->
+        <section id="courses" class="page-section">
+            <div class="page-header">
+                <div class="container">
+                    <h2>Our Courses</h2>
+                    <p>Programs designed for the future.</p>
+                </div>
+            </div>
+            <div class="container section-padding">
+                <div class="grid-3">
+                    <div class="card course-card">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500" alt="Computer Science">
+                        <div class="course-content">
+                            <span class="badge">Undergraduate</span>
+                            <h3>B.S. Computer Science</h3>
+                            <p>Focus on artificial intelligence, software engineering, and data science.</p>
+                            <a href="#admissions" class="btn btn-outline w-100 mt-20">Apply Now</a>
+                        </div>
+                    </div>
+                    <div class="card course-card">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500" alt="Business Admin">
+                        <div class="course-content">
+                            <span class="badge">Undergraduate</span>
+                            <h3>B.A. Business Administration</h3>
+                            <p>Learn global business strategies, marketing, and corporate finance.</p>
+                            <a href="#admissions" class="btn btn-outline w-100 mt-20">Apply Now</a>
+                        </div>
+                    </div>
+                    <div class="card course-card">
+                        <img src="https://images.unsplash.com/photo-1581092921461-7d62638848d5?w=500" alt="Engineering">
+                        <div class="course-content">
+                            <span class="badge">Postgraduate</span>
+                            <h3>M.S. Mechanical Engineering</h3>
+                            <p>Advanced studies in robotics, thermodynamics, and modern manufacturing.</p>
+                            <a href="#admissions" class="btn btn-outline w-100 mt-20">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FACULTY PAGE -->
+        <section id="faculty" class="page-section">
+            <div class="page-header">
+                <div class="container">
+                    <h2>Our Faculty</h2>
+                    <p>Learn from industry leaders and renowned researchers.</p>
+                </div>
+            </div>
+            <div class="container section-padding">
+                <div class="grid-4">
+                    <div class="card faculty-card">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Prof. James">
+                        <div class="faculty-info">
+                            <h3>Dr. James Wilson</h3>
+                            <span>Dean of Computer Science</span>
+                            <div class="social-links mt-10">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card faculty-card">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Prof. Sarah">
+                        <div class="faculty-info">
+                            <h3>Dr. Sarah Jenkins</h3>
+                            <span>Head of Business School</span>
+                            <div class="social-links mt-10">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card faculty-card">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Prof. Robert">
+                        <div class="faculty-info">
+                            <h3>Prof. Robert Chen</h3>
+                            <span>Lead Researcher, AI Lab</span>
+                            <div class="social-links mt-10">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card faculty-card">
+                        <img src="https://randomuser.me/api/portraits/women/42.jpg" alt="Prof. Emily">
+                        <div class="faculty-info">
+                            <h3>Dr. Emily Carter</h3>
+                            <span>Professor of Literature</span>
+                            <div class="social-links mt-10">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EVENTS PAGE -->
+        <section id="events" class="page-section">
+            <div class="page-header">
+                <div class="container">
+                    <h2>Campus Events</h2>
+                    <p>Stay updated with what's happening on campus.</p>
+                </div>
+            </div>
+            <div class="container section-padding">
+                <div class="events-list">
+                    <div class="event-item card">
+                        <div class="event-date">
+                            <span class="month">OCT</span>
+                            <span class="day">15</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Annual Tech Symposium 2026</h3>
+                            <p><i class="fas fa-clock"></i> 10:00 AM - 4:00 PM | <i class="fas fa-map-marker-alt"></i> Main Auditorium</p>
+                            <p class="desc">Join industry leaders for a day of talks on AI, quantum computing, and the future of technology.</p>
+                        </div>
+                    </div>
+                    <div class="event-item card">
+                        <div class="event-date">
+                            <span class="month">NOV</span>
+                            <span class="day">02</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Fall Career Fair</h3>
+                            <p><i class="fas fa-clock"></i> 9:00 AM - 5:00 PM | <i class="fas fa-map-marker-alt"></i> Student Union</p>
+                            <p class="desc">Connect with over 100 top employers offering internships and full-time positions.</p>
+                        </div>
+                    </div>
+                    <div class="event-item card">
+                        <div class="event-date">
+                            <span class="month">DEC</span>
+                            <span class="day">10</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Winter Arts Festival</h3>
+                            <p><i class="fas fa-clock"></i> 6:00 PM - 9:00 PM | <i class="fas fa-map-marker-alt"></i> Campus Grounds</p>
+                            <p class="desc">Experience student performances, art exhibitions, and a festive winter market.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY PAGE -->
+        <section id="gallery" class="page-section">
+            <div class="page-header">
+                <div class="container">
+                    <h2>Photo Gallery</h2>
+                    <p>Glimpses of campus life.</p>
+                </div>
+            </div>
+            <div class="container section-padding">
+                <div class="gallery-grid">
+                    <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=600" alt="Campus">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600" alt="Graduation">
+                    <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=600" alt="Library">
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600" alt="Students">
+                    <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=600" alt="Classroom">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600" alt="Teamwork">
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT PAGE -->
+        <section id="contact" class="page-section">
+            <div class="page-header">
+                <div class="container">
+                    <h2>Contact Us</h2>
+                    <p>We'd love to hear from you.</p>
+                </div>
+            </div>
+            <div class="container section-padding">
+                <div class="grid-2">
+                    <div class="contact-info-boxes">
+                        <div class="card text-center mb-20">
+                            <i class="fas fa-map-marked-alt fa-3x mb-10" style="color: var(--primary)"></i>
+                            <h3>Our Location</h3>
+                            <p>123 University Avenue<br>College Town, ST 12345</p>
+                        </div>
+                        <div class="card text-center mt-20">
+                            <i class="fas fa-envelope-open-text fa-3x mb-10" style="color: var(--primary)"></i>
+                            <h3>Email & Phone</h3>
+                            <p>info@university.edu<br>+1 (800) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="card form-card">
+                        <h3>Send us a Message</h3>
+                        <form id="contactForm">
+                            <div class="grid-2" style="gap:15px; margin-bottom: 20px;">
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label>First Name</label>
+                                    <input type="text" required>
+                                </div>
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label>Last Name</label>
+                                    <input type="text" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid-4">
+                <div class="footer-col">
+                    <a href="#home" class="logo text-white">
+                        <i class="fas fa-university text-white"></i>
+                        <div class="logo-text">
+                            <h3 class="text-white">UnivExcellence</h3>
+                        </div>
+                    </a>
+                    <p class="mt-20">Empowering minds and transforming futures since 1920. Join our global community.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="text-white">Quick Links</h4>
+                    <ul>
+                        <li><a href="#admissions">Admissions</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#faculty">Faculty</a></li>
+                        <li><a href="#events">Campus Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="text-white">Resources</h4>
+                    <ul>
+                        <li><a href="#">Student Portal</a></li>
+                        <li><a href="#">Library</a></li>
+                        <li><a href="#">Alumni</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="text-white">Newsletter</h4>
+                    <p class="mb-10">Subscribe to our newsletter for the latest updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email address" required>
+                        <button type="submit" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 UnivExcellence. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
